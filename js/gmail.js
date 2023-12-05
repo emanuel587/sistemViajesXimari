@@ -1,4 +1,4 @@
-// Importar las funciones de autenticación necesarias de Firebase
+
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
