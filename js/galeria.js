@@ -18,7 +18,7 @@ function loadPexelsImages(url) {
         imageElement.src = photo.src.medium;
         imageElement.alt = photo.photographer;
 
-        // Agregar evento de clic para abrir el modal con la imagen
+
         imageElement.addEventListener('click', function() {
           openModal(photo.src.large);
         });
