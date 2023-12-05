@@ -19,7 +19,7 @@ function loadPexelsImages(url) {
         imageElement.src = photo.src.medium;
         imageElement.alt = photo.photographer;
 
-        // Agregar evento de clic para abrir el modal con la imagen
+      
         imageElement.addEventListener('click', function() {
           openModal(photo.src.large);
         });
@@ -59,7 +59,7 @@ function closeModal() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Inicializar con una búsqueda por defecto (por ejemplo, paisajes hermosos)
+
   pexelsApiUrl = 'https://api.pexels.com/v1/search?query=beautiful+places&per_page=100&page=1';
   loadPexelsImages(pexelsApiUrl);
 });
