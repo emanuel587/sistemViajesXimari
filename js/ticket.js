@@ -18,7 +18,7 @@ script.onload = function () {
                 purchase_units: [{
                     amount: {
                         currency: 'MXN',
-                        value: '100.00'
+                        value: '20000.00'
                     }
                 }]
             });
