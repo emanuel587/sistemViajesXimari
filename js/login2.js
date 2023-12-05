@@ -15,14 +15,14 @@ const firebaseConfig = {
   measurementId: "G-82PGPNCRE6"
 };
 
-// Inicializar Firebase
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Obtener referencia al botón de cerrar
 const cerrar = document.getElementById("cerrar");
 
-// Manejar clic en el botón de cerrar
+
 cerrar.addEventListener('click', () => {
   auth.signOut()
     .then(() => {
