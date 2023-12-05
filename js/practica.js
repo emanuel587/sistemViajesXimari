@@ -8,7 +8,7 @@
             const buscarLugarBtn = document.getElementById('buscarLugar');
             const mapContainer = document.getElementById('map');
         
-            // Inicialización del mapa
+            
             const platform = new H.service.Platform({
                 'apikey': HERE_API_KEY
             });
