@@ -39,11 +39,11 @@
                         const location = result.items[0].position;
                         console.log('Coordenadas:', location.lat, location.lng);
         
-                        // Puedes agregar lógica adicional aquí, como colocar un marcador en el mapa
+                      
                         const marker = new H.map.Marker({ lat: location.lat, lng: location.lng });
                         map.addObject(marker);
                         map.setCenter({ lat: location.lat, lng: location.lng });
-                        map.setZoom(15); // Puedes ajustar el nivel de zoom según tus necesidades
+                        map.setZoom(15);
                     })
                     .catch(error => {
                         console.error('Error al buscar el lugar:', error);
