@@ -2,7 +2,7 @@ const apiKey = 'AIzaSyB1utTx7yeue7JE5C3G1KZ7rqHG1VC8jII';
 const videoContainer = document.getElementById('youtube-player');
 
 function loadRandomTravelDestinationVideos() {
-  const destinations = ['beach', 'mountain', 'city', 'forest']; // Puedes agregar más destinos según tus necesidades
+  const destinations = ['beach', 'mountain', 'city', 'forest']; 
   const randomDestination = destinations[Math.floor(Math.random() * destinations.length)];
 
   const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${randomDestination} travel destination&videoEmbeddable=true&type=video&videoDefinition=high&maxResults=5`;
