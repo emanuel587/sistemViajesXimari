@@ -1,110 +1,116 @@
-/**
- * 01/28/2016
- * This pen is years old, and watching at the code after all
- * those years made me fall from my chair, so I:
- * - changed all IDs to classes
- * - converted all units to pixels and em units
- * - changed all global elements to classes or children of
- *   .login
- * - cleaned the syntax to be more consistent
- * - added a lot of spaces that I so hard tried to avoid
- *   a few years ago
- *   (because it's cool to not use them)
- * - and probably something else that I can't remember anymore
- *
- * I sticked to the same philosophy, meaning:
- * - the design is almost the same
- * - only pure HTML and CSS
- * - no frameworks, preprocessors or resets
- */
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
-/* 'Open Sans' font from Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/* Colores */
+:root {
+  --color-fondo: #0e0e0e;
+  --color-borde: #fcba03;
+  --color-texto: #ffffff;
+  --color-placeholder: #b5b5b5;
+  --color-boton: #fcba03;
+  --color-boton-hover: #d6a002;
+  --color-boton-texto: #0e0e0e;
+  --color-link: #fcba03;
+  --color-link-hover: #d6a002;
+}
+
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  background: #456;
-  font-family: 'Open Sans', sans-serif;
+  background-image: url(https://www.passengertravel.com/files/IMG_552_1647867573.jpg);
+  font-family: 'Poppins', sans-serif;
+ 
+  color: #040404;
 }
 
-.login {
-  width: 400px;
-  margin: 16px auto;
-  font-size: 16px;
-}
-
-/* Reset top and bottom margins from certain elements */
-.login-header,
-.login p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* The triangle form is achieved by a CSS hack */
-.login-triangle {
-  width: 0;
-  margin-right: auto;
-  margin-left: auto;
-  border: 12px solid transparent;
-  border-bottom-color: #28d;
-}
-
-.login-header {
-  background: #28d;
-  padding: 20px;
-  font-size: 1.4em;
-  font-weight: normal;
+h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
   text-align: center;
-  text-transform: uppercase;
-  color: #fff;
+  margin: 1.5rem 0;
 }
 
-.login-container {
-  background: #ebebeb;
-  padding: 12px;
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
-/* Every row inside .login-container is defined with p tags */
-.login p {
-  padding: 12px;
+a:hover {
+  color: var(--color-link-hover);
 }
 
-.login input {
-  box-sizing: border-box;
-  display: block;
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid var(--color-borde);
+  border-radius: 1rem;
+  max-width: 35rem;
+}
+
+label {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type='text'],
+input[type='password'] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--color-borde);
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
   width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  padding: 16px;
-  outline: 0;
-  font-family: inherit;
-  font-size: 0.95em;
 }
 
-.login input[type="email"],
-.login input[type="password"] {
-  background: #fff;
-  border-color: #bbb;
-  color: #555;
+input[type='text']:focus,
+input[type='password']:focus {
+  outline: none;
+  border-color: var(--color-boton);
 }
 
-/* Text fields' focus effect */
-.login input[type="email"]:focus,
-.login input[type="password"]:focus {
-  border-color: #888;
+input[type='text']::placeholder,
+input[type='password']::placeholder {
+  color: var(--color-boton-texto);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
 }
 
-.login input[type="submit"] {
-  background: #28d;
-  border-color: transparent;
-  color: #fff;
+button[type='submit'] {
+  background-color: var(--color-boton);
+  border: none;
+  border-radius: 1rem;
+  color: var(--color-boton-texto);
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.login input[type="submit"]:hover {
-  background: #17c;
+button[type='submit']:hover {
+  background-color: var(--color-boton-hover);
 }
 
-/* Buttons' focus effect */
-.login input[type="submit"]:focus {
-  border-color: #05a;
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  form {
+    max-width: none;
+  }
 }
