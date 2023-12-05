@@ -58,7 +58,7 @@ function closeModal() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Inicializar con una búsqueda por defecto (por ejemplo, paisajes hermosos)
+
   pexelsApiUrl = 'https://api.pexels.com/v1/search?query=beautiful+places&per_page=100&page=1';
   loadPexelsImages(pexelsApiUrl);
 });
