@@ -15,8 +15,8 @@
         
             const defaultLayers = platform.createDefaultLayers();
             const map = new H.Map(mapContainer, defaultLayers.vector.normal.map, {
-                center: { lat: 0, lng: 0 }, // Centro del mapa inicial
-                zoom: 2 // Nivel de zoom inicial
+                center: { lat: 0, lng: 0 }, 
+                zoom: 2
             });
         
             const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
